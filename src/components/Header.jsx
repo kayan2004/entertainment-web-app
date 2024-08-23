@@ -21,7 +21,7 @@ const Header = () => {
       <Navbar></Navbar>
       <img
         className="w-[24px] h-auto md:w-[32px] lg:w-[40px] lg:mt-auto "
-        src="/src/assets/image-avatar.png"
+        src="/assets/image-avatar.png"
         alt="avatar"
       ></img>
     </header>
