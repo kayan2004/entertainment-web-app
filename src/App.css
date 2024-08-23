@@ -1,0 +1,15 @@
+*,
+*:before,
+*:after {
+  font-family: "Outfit", sans-serif;
+}
+
+.disablescrollbar {
+  overflow: visible; /* Allow content to overflow */
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.disablescrollbar::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
