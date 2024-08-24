@@ -1,4 +1,14 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 const Searchbar = () => {
+  const [query, setQuery] = useState("");
+  const navigate = useNavigate();
+
+  const handleSearch = (e) => {
+    setQuery(e.target.value);
+    navigate(`/search?q=${e.target.value}`);
+  };
+
   return (
     <div className="flex items-center gap-3 col-start-2  p-6 md:p-0 md:m-6 lg:col-start-2 lg:col-end-4 lg:row-start-1">
       <label className="" htmlFor="searchInput">
@@ -20,6 +30,8 @@ const Searchbar = () => {
         id="searchInput"
         type="text"
         placeholder="Search for movies or TV series"
+        value={query}
+        onChange={handleSearch}
       ></input>
     </div>
   );

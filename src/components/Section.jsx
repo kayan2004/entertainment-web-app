@@ -11,20 +11,21 @@ const Section = ({ containerStyles, heading, data, onClick }) => {
       >
         {heading}
       </h2>
-
-      <div className={containerStyles}>
-        {data.map((object) => {
-          return heading !== "Trending" ? (
-            <Thumbnail key={object.title} object={object} onClick={onClick} />
-          ) : (
-            <Biggerthumbnail
-              key={object.title}
-              object={object}
-              onClick={onClick}
-            />
-          );
-        })}
-      </div>
+      {data.length !== 0 && (
+        <div className={containerStyles}>
+          {data.map((object) => {
+            return heading !== "Trending" ? (
+              <Thumbnail key={object.title} object={object} onClick={onClick} />
+            ) : (
+              <Biggerthumbnail
+                key={object.title}
+                object={object}
+                onClick={onClick}
+              />
+            );
+          })}
+        </div>
+      )}
     </section>
   );
 };

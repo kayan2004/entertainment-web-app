@@ -7,6 +7,7 @@ import Bookmarks from "./pages/Bookmarks";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Searchbar from "./components/Searchbar";
 import { useState } from "react";
+import Search from "./pages/Search";
 function App() {
   const [bookmarkedData, setBookmarkedData] = useState([]);
 
@@ -54,6 +55,12 @@ function App() {
             path="/bookmarks"
             element={
               <Bookmarks data={bookmarkedData} onClick={removeBookmarkedData} />
+            }
+          />
+          <Route
+            path="/search"
+            element={
+              <Search data={bookmarkedData} onClick={removeBookmarkedData} />
             }
           />
         </Routes>

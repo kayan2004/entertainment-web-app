@@ -12,12 +12,25 @@ const Thumbnail = ({ object, onClick }) => {
 
   console.log(className);
   return (
-    <div className="relative flex flex-col gap-2">
-      <div>
+    <div className=" flex flex-col gap-2 group">
+      <div className="relative">
         <img
           className="rounded-lg w-full h-auto"
           src={object.thumbnail.regular.small}
         ></img>
+        <button
+          className="hidden group-hover:flex rounded-full bg-[rgba(16,20,30,0.2)] absolute 
+         top-[50%] right-[50%] translate-x-[50%] translate-y-[-50%]
+        p-2 gap-6"
+        >
+          <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M15 0C6.713 0 0 6.713 0 15c0 8.288 6.713 15 15 15 8.288 0 15-6.712 15-15 0-8.287-6.712-15-15-15Zm-3 21V8l9 6.5-9 6.5Z"
+              fill="#FFF"
+            />
+          </svg>
+          <span className="font-medium text-white text-[18px]"> Play</span>
+        </button>
         <button
           onClick={() => {
             onClick(object);
