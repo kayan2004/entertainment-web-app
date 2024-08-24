@@ -14,6 +14,7 @@ const Biggerthumbnail = ({ object, onClick }) => {
       <img
         className="block w-auto h-[140px] xs:h-[190px] sm:h-[240px] lg:h-[320px] rounded-lg "
         src={object.thumbnail.regular.small}
+        alt={`${object.title} thumbnail`}
       ></img>
       <button
         className="hidden group-hover:flex rounded-full bg-[rgba(16,20,30,0.2)] absolute 
