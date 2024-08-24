@@ -17,6 +17,7 @@ const Thumbnail = ({ object, onClick }) => {
         <img
           className="rounded-lg w-full h-auto"
           src={object.thumbnail.regular.small}
+          alt={`${object.title} thumbnail`}
         ></img>
         <button
           className="hidden group-hover:flex rounded-full bg-[rgba(16,20,30,0.2)] absolute 
